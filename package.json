@@ -1,6 +1,6 @@
 {
   "name": "@metamodern/pug-filter-markdown",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A custom Pug filter to render Markdown (with options)",
   "author": "Daniel C. Narey <os@metamodern.design>",
   "license": "ISC",
