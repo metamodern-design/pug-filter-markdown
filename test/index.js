@@ -8,7 +8,7 @@ const render = (str) => {
     filters: { md },
   });
   
-  return html.trim().replace('\n', '');
+  return html.trim().split('\n').join('');
 };
 
 
@@ -83,6 +83,6 @@ test('Typographer is on unless disabled', async (t) => {
   );
   t.is(
     render('div\n  :md(typographer=false)\n    "Cogito, ergo sum." ---Descartes'),
-    '<div><p>"Cogito, ergo sum." ---Descartes</p></div>',
+    '<div><p>&quot;Cogito, ergo sum.&quot; ---Descartes</p></div>',
   );
 });
