@@ -1,5 +1,6 @@
 import test from 'ava';
-import render from '../lib/index.js';
+import pug from 'pug';
+import md from '../lib/index.js';
 
 
 const pugString = `
@@ -13,7 +14,7 @@ const expected = `<div class="text-center"><h1 class="text-lg text-red">This is 
 
 
 test('Renders Markdown inside Pug', async (t) => {
-  const result = render(pugString).trim();
+  const result = pug.render(pugString, { filters: { md }}).trim();
 
   t.is(result, expected);
 });
